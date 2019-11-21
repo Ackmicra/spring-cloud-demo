@@ -2,20 +2,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion><!-- pom模型版本 -->
 
-    <groupId>com.dhcc.zpc</groupId>
-    <artifactId>springcloud-demo</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>com.dhcc.zpc</groupId> <!-- 项目唯一标识 -->
+    <artifactId>springcloud-demo</artifactId> <!-- 项目名 -->
+    <packaging>pom</packaging> <!-- 打包方式 （pom,war,jar），一般父模块采用pom方式，而子模块采用jar方式 -->
+    <version>1.0-SNAPSHOT</version><!-- 版本 -->
+
+    <!-- 子模块 -->
     <modules>
         <module>springcloud-eureka-7001</module>
         <module>springcloud-eureka-7002</module>
         <module>springcloud-eureka-7003</module>
-        <module>springcloud-eureka-7001</module>
-        <module>springcloud-eureka-7002</module>
-        <module>springcloud-eureka-7003</module>
+        <module>springcloud-util</module>
     </modules>
+
+    <!-- 父级项目 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -23,23 +25,34 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+    <!-- 属性设置 -->
     <properties>
+        <!-- 编译字符编码为utf-8 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- 输出字符编码为UTF-8  -->
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- jdK版本 -->
         <java.version>1.8</java.version>
     </properties>
 
+    <!-- 依赖关系 -->
     <dependencies>
+        <!--eureka server -->
         <dependency>
-            <!--eureka server -->
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
 
+        <!-- spring boot test-->
         <dependency>
-            <!-- spring boot test-->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.10</version>
         </dependency>
     </dependencies>
 
@@ -55,8 +68,11 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- 编译 -->
     <build>
+        <!-- 插件 -->
         <plugins>
+            <!-- maven插件 -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
