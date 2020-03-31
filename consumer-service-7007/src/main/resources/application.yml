@@ -1,0 +1,28 @@
+#端口号
+server:
+  port: 7007
+
+spring:
+  application:
+    name:  consumer-service
+
+#eureka配置
+eureka:
+  instance:
+    #注册中心ip地址
+    hostname: eureka7007.com
+  client:
+    #是否注册到eureka
+    #registerWithEureka: false
+    #是否检测服务信息
+    #fetchRegistry: false
+    #注册地址
+    serviceUrl:
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://127.0.0.1:7001/eureka/
+
+#feign远程调用配置
+feign:
+  hystrix:
+    #开启熔断
+    enabled: true

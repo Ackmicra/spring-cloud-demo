@@ -1,0 +1,4 @@
+com\dhcc\zpc\controller\HelloController.class
+com\dhcc\zpc\feign\HelloRemote.class
+com\dhcc\zpc\hystrix\HelloRemoteFallback.class
+com\dhcc\zpc\ConsumerApplication7007.class

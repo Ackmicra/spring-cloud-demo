@@ -1,5 +1,0 @@
-com\dhcc\zpc\rocketmq\consumer\MQConsumerManager.class
-com\dhcc\zpc\rocketmq\domain\MQParmsDomain.class
-com\dhcc\zpc\SpringCloudUtilApplication.class
-com\dhcc\zpc\util\CmsBusinessStatus.class
-com\dhcc\zpc\rocketmq\producer\MQProducerManager.class

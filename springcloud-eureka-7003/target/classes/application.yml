@@ -1,6 +1,11 @@
 #端口号
 server:
   port: 7003
+
+spring:
+  application:
+    name:  service-registry
+
 #eureka配置
 eureka:
   instance:

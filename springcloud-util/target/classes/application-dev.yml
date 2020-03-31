@@ -1,8 +1,0 @@
-#rocketMQ配置
-rocketmq:
-  topic: JD_MFS_MESSAGE
-  group: my-group
-  sendTimeout: 5000
-  name-server: 140.143.124.166:9876
-  producer:
-    group: my-group

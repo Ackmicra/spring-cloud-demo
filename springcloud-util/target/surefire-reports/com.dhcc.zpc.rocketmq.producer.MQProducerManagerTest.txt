@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.dhcc.zpc.rocketmq.producer.MQProducerManagerTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.328 s <<< FAILURE! - in com.dhcc.zpc.rocketmq.producer.MQProducerManagerTest
-produceTest(com.dhcc.zpc.rocketmq.producer.MQProducerManagerTest)  Time elapsed: 0.953 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.dhcc.zpc.rocketmq.producer.MQProducerManagerTest.produceTest(MQProducerManagerTest.java:41)
-
